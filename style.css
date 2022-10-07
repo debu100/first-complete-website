@@ -1,0 +1,269 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/* Global */
+.container {
+  width: 80%; /* using % to make it responsive.not using absolute pixe;s values.*/
+  margin: auto;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; /*ul by default has padding and margin so make them 0.*/
+}
+
+.sub-button {
+  height: 36px;
+  background-color: #e8491d;
+  border: none;
+  padding: 0 20px;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.sub-button:hover {
+  background-color: #fff;
+  color: #e8491d;
+  cursor: pointer;
+}
+
+.dark {
+  padding: 15px;
+  background-color: #35424a;
+  color: #fff;
+  margin: 10px 0;
+}
+
+/* Header */
+header {
+  background-color: #35424a;
+  color: #fff;
+  padding-top: 30px;
+  min-height: 70px; /*so, when the site is responsive and the screen size is smaller, text size increases and the menu/nav bar goes to the next line,in that case we want the height to adjust. */
+  border-bottom: #e8491d 3px solid;
+}
+
+/* links */
+header a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* li*/
+header li {
+  /* float: left; */
+  display: inline;
+  padding: 0 20px;
+}
+
+header #branding {
+  float: left;
+}
+
+header #branding h1 {
+  margin: 0;
+}
+
+header nav {
+  float: right;
+  margin-top: 12px;
+}
+
+header .highlight,
+header .current a {
+  color: #e8491d;
+  font-weight: bolder;
+}
+
+header a:hover {
+  color: #ccc;
+  font-weight: bold;
+}
+
+/* Styling Showcase Area */
+#showcase {
+  min-height: 400px;
+  background-image: url("images/jorge-ramirez-SVpWtjXmLZg-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#showcase h1 {
+  text-align: center;
+  color: darkgreen;
+  margin-top: 30px;
+  padding-top: 20px;
+  font-weight: 800;
+  font-size: 35px;
+  transition: 0.5s;
+}
+
+#showcase h1:hover {
+  text-decoration: underline #e8491d;
+  transform: translateY(-15px);
+}
+
+#showcase p {
+  font-size: 20px;
+  color: #fff;
+}
+
+#showcase a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #e8491d;
+  transition: 0.3s;
+}
+
+#showcase a:hover {
+  cursor: pointer;
+  color: darkolivegreen;
+  text-decoration: underline;
+}
+
+/* NewsLetter Area */
+#newsletter {
+  padding: 15px;
+  color: #fff;
+  background-color: #35424a;
+}
+
+#newsletter h1 {
+  float: left;
+  transition: 0.5s;
+}
+
+#newsletter h1:hover {
+  color: #e8491d;
+}
+
+#newsletter form {
+  float: right;
+  margin-top: 20px;
+}
+
+#newsletter input[type="email"] {
+  padding: 4px;
+  height: 25px;
+  width: 250px;
+}
+
+/* Boxes Area */
+#boxes {
+  margin-top: 40px;
+}
+
+#boxes .box img {
+  height: auto; /*browser sets the height automatically.can give absolute pixels value initially given 150px.*/
+  width: 100px; /*by using pixels the size of the image decreases a lot, was given in % it was 60%*/
+}
+
+#boxes .box {
+  float: left; /*only doing this won't work*/
+  width: 33%; /*using % to make responsive,we need to add width as there are 3 elements here give width as 33%*/
+  text-align: center;
+  padding: 20px; /*the third element will break to the next line as it barely fits the 3 in same line with width 33% and after adding padding the size increases.*/
+  box-sizing: border-box; /*to tackle the above problem use this property it will include the padding within the padding quantity.*/
+  transition: 0.5s;
+}
+
+#boxes .box:hover {
+  transform: translateY(-15px);
+  cursor: pointer;
+}
+
+/* Sidebar */
+aside#sidebar {
+  float: right;
+  width: 30%;
+  margin-top: 10px;
+}
+
+/* Main-col */
+article#main-col {
+  float: left;
+  width: 65%;
+}
+
+/* Services */
+.page-title {
+  font-size: 30px;
+  color: #e8491d;
+}
+
+ul.services li {
+  list-style: none;
+  padding: 20px;
+  border: #ccc solid 1px;
+  background-color: #e6e6e6;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+aside#sidebar .quote input,
+aside#sidebar .quote textarea {
+  width: 90%;
+  padding: 10px 0;
+}
+
+.service {
+  color: #e8491d;
+  font-size: 18px;
+}
+
+footer {
+  padding: 20px;
+  margin-top: 20px;
+  color: #fff;
+  background-color: #e8491d;
+  text-align: center;
+}
+
+footer p:hover {
+  transform: translateY(-10px);
+  transition: 0.5s;
+}
+
+/* Media Quries */
+@media (max-width: 768px) {
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header {
+    padding-bottom: 20px;
+  }
+
+  #newsletter button,
+  .quote button {
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+  }
+
+  #newsletter form input[type="email"],
+  .quote input,
+  .quote textarea {
+    width: 100%;
+  }
+}
